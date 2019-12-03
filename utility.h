@@ -3,7 +3,9 @@
 #define UTILITY_H
 
 //Gives ANSI version of standard includes
-
+#include <queue> 
+#include <iostream>
+#include <sstream>
 #include <iostream>
 #include <iomanip> 
 #include <limits>
@@ -17,6 +19,7 @@
 #include <vector>
 #include <algorithm>
 #include <stdio.h> 
+#include <map> 
 
 using namespace std;
 
