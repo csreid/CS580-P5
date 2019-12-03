@@ -16,6 +16,7 @@
 #include <cctype>
 #include <ctime>
 #include <string>
+#include <string.h>
 #include <vector>
 #include <algorithm>
 #include <stdio.h> 
