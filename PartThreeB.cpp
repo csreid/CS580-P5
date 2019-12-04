@@ -14,7 +14,6 @@ int main() {
 		auto code = string(strtok(NULL, " "));
 
 		ct[code] = c;
-		printf("%c\n", ct["111"]);
 	}
 
 	codetable_input.close();
@@ -32,7 +31,6 @@ int main() {
 			char found = ct[sofar];
 			decoded_output.put(found);
 			sofar = "";
-			printf("%c\n", found);
 		}
 	}
 

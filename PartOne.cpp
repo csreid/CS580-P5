@@ -14,7 +14,7 @@ void makeFile(string file_name,  int items[]) {
 				}
 				else {
 					file << c << " "<< freq << endl;
-				}			
+				}
 			}
 		}
 	}
