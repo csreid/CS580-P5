@@ -20,6 +20,7 @@
 #include <algorithm>
 #include <stdio.h>
 #include <map>
+#include <bitset>
 
 
 using namespace std;
