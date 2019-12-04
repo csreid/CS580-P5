@@ -10,10 +10,10 @@ void writeEncodedFile(string arr[128]) {
 	}
 	char c = NULL;
 	ofstream writeFile;
+	ofstream otherFile;
 	writeFile.open("coded.txt");
 	if (writeFile.is_open()) {
 		while (!in_stream.eof()) {
-			printf("%c -> %s\n", c, arr[static_cast <int>(c)]);
 			in_stream.get(c);
 			writeFile << arr[static_cast <int>(c)];
 		}

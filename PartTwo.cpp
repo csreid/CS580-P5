@@ -75,7 +75,7 @@ void generateEncoding(BinaryNode* root, string binaryString, map<int, string, gr
 
 priority_queue<BinaryNode*, vector<BinaryNode*>, CompareFrequency> readInFile() {
 	ifstream in_stream;
-	in_stream.open("freqTest.txt");
+	in_stream.open("freq.txt");
 	if (in_stream.fail()) {
 		cout << "Unable to find input file.";
 		exit(1);
@@ -106,6 +106,6 @@ int main() {
 	BinaryNode* root = nodes.top();
 	map<int, string, greater<int>> codeMap;
 	generateEncoding(root, "", codeMap);
-	writeToFile("codetableText.txt", codeMap);
+	writeToFile("codetable.txt", codeMap);
 	return 0;
 }	
