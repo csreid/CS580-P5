@@ -17,8 +17,8 @@ void writeEncodedFile(string arr[128]) {
 	unsigned char buffer = 0;
 
 	if (writeFile.is_open()) {
-		while (!in_stream.eof()) {
-			in_stream.get(c);
+		//while (!in_stream.eof()) {
+		while(in_stream.get(c)) {
 			auto toWrite = arr[static_cast <int>(c)];
 
 			for (char const &c : toWrite) {
@@ -35,6 +35,12 @@ void writeEncodedFile(string arr[128]) {
 				}
 			}
 		}
+
+		for (counter; counter < 8; counter++) {
+			buffer <<= 1;
+		}
+
+		writeFile << buffer;
 	}
 	else cout << "Unable to open/create file";
 	in_stream.close();
