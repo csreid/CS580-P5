@@ -7,8 +7,9 @@ int main() {
 	string ln;
 
 	while (getline(codetable_input, ln)) {
-		char strArray[ln.size() + 1];
-		strcpy(strArray, ln.c_str());
+		// char strArray[ln.size() + 1];
+		//strcpy(strArray, ln.c_str());
+		auto strArray = ln.c_str();
 
 		char c;
 		int offset;
