@@ -19,7 +19,7 @@ int main() {
 			offset = 2 * sizeof(char);
 		}
 
-		auto code = strArray + offset;
+		const char* code = strArray + offset;
 		cout << flush;
 
 		auto strcode = string(code);
