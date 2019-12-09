@@ -10,15 +10,13 @@ void writeEncodedFile(string arr[128]) {
 	}
 	char c = NULL;
 	ofstream writeFile;
-	ofstream otherFile;
 	writeFile.open("coded.txt");
 	if (writeFile.is_open()) {
-		while (!in_stream.eof()) {
-			in_stream.get(c);
+		while(in_stream.get(c)){
+			printf("Got char %c\n", c);
 			writeFile << arr[static_cast <int>(c)];
 		}
-	}
-	else cout << "Unable to open/create file";
+	} else cout << "Unable to open/create file";
 	in_stream.close();
 }
 
