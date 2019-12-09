@@ -1,4 +1,5 @@
 #include "utility.h"
+//Team 6: Cameron Reid and Kaley Rittichier
 
 int main() {
 	auto ct = map<string, char>();
@@ -14,7 +15,8 @@ int main() {
 		if (strArray[0] == 'L' && strArray[1] == 'F') {
 			c = '\n';
 			offset = 3 * sizeof(char);
-		} else {
+		}
+		else {
 			c = strArray[0];
 			offset = 2 * sizeof(char);
 		}
@@ -25,7 +27,7 @@ int main() {
 		auto strcode = string(code);
 
 		ct[strcode] = c;
-		printf("ct[%s] = %c\n", strcode.c_str(), c);
+		//printf("ct[%s] = %c\n", strcode.c_str(), c);
 	}
 
 	codetable_input.close();
@@ -40,7 +42,8 @@ int main() {
 		for (int i = 7; i >= 0; i--) {
 			if ((c >> i) & 1) {
 				sofar += '1';
-			} else {
+			}
+			else {
 				sofar += '0';
 			}
 

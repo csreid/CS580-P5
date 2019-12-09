@@ -17,11 +17,10 @@ void writeEncodedFile(string arr[128]) {
 	unsigned char buffer = 0;
 
 	if (writeFile.is_open()) {
-		while (!in_stream.eof()) {
-			in_stream.get(c);
+		while (in_stream.get(c)) {
 			auto toWrite = arr[static_cast <int>(c)];
 
-			for (char const &c : toWrite) {
+			for (char const& c : toWrite) {
 				buffer <<= 1;
 				if (c == '1') {
 					buffer |= 1;
