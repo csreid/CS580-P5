@@ -34,6 +34,11 @@ void writeEncodedFile(string arr[128]) {
 				}
 			}
 		}
+		for (counter; counter < 8; counter++) {
+			buffer <<= 1;
+		}
+
+		writeFile << buffer;
 	}
 	else cout << "Unable to open/create file";
 	in_stream.close();
