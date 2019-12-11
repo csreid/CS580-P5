@@ -11,17 +11,16 @@ void writeEncodedFile(string arr[128]) {
 	char c = NULL;
 	ofstream writeFile;
 	ofstream otherFile;
-	writeFile.open("coded_binary.txt");
+	writeFile.open("codedalt.txt", ofstream::binary);
 
 	int counter = 0;
 	unsigned char buffer = 0;
 
 	if (writeFile.is_open()) {
-		//while (!in_stream.eof()) {
-		while(in_stream.get(c)) {
+		while (in_stream.get(c)) {
 			auto toWrite = arr[static_cast <int>(c)];
-
-			for (char const &c : toWrite) {
+			cout << c << endl;
+			for (char const& c : toWrite) {
 				buffer <<= 1;
 				if (c == '1') {
 					buffer |= 1;
@@ -35,7 +34,6 @@ void writeEncodedFile(string arr[128]) {
 				}
 			}
 		}
-
 		for (counter; counter < 8; counter++) {
 			buffer <<= 1;
 		}
